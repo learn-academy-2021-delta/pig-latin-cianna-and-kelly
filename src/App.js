@@ -32,8 +32,29 @@ class App extends Component{
         return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
       })
       console.log("vowelsArray:", vowelsArray)
+    
 
       // your code here!
+      // let yay = yay
+      // let ay = ay
+
+      // OLD CODE 
+      // if(currentWord.charAt(0) === vowelsArray.length){
+      //   return currentWord + "yay"
+      // } else if (vowelsArray.length === 0){
+      //   return currentWord.slice(currentWord.indexOf("y")) + currentWord.substring(0, currentWord.indexOf("y")) + "ay"
+      // }
+   
+
+     // ORIGINAL CODE THAT WORKS****
+      if(vowelsArray.length === 0){
+        return currentWord.slice(currentWord.indexOf("y")) + currentWord.substring(0, currentWord.indexOf("y")) + "ay"
+      } else if (currentWord.indexOf(vowelsArray) === vowelsArray.length){
+        return currentWord + "yay"
+      } 
+      console.log("currentWord:", currentWord)
+
+
 
       // Remember: console.log is your friend :)
 
