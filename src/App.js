@@ -48,11 +48,18 @@ class App extends Component{
 
      // ORIGINAL CODE THAT WORKS****
       if(vowelsArray.length === 0){
-        return currentWord.slice(currentWord.indexOf("y")) + currentWord.substring(0, currentWord.indexOf("y")) + "ay"
+          return currentWord.slice(currentWord.indexOf("y")) + currentWord.substring(0, currentWord.indexOf("y")) + "ay"
       } else if (currentWord.indexOf(vowelsArray) === vowelsArray.length){
-        return currentWord + "yay"
-      } 
-      console.log("currentWord:", currentWord)
+          return currentWord + "yay"
+      } else if (currentWord.indexOf(vowelsArray.length[0])){
+          return currentWord + "yay"
+      } else if (currentWord.indexOf(vowelsArray) === vowelsArray.length){
+          return (currentWord.slice(currentWord.indexOf(vowelsArray)) + currentWord.substring(0, currentWord.indexOf(vowelsArray)) + "ay")
+      }
+
+
+    
+      // console.log("currentWord:", currentWord)
 
 
 
